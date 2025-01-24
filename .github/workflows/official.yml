@@ -115,9 +115,9 @@ jobs:
     needs:
       - build-appmap-js
       - prepare-matrix
-    runs-on: SWE-Bench_Larger
+    runs-on: ubuntu-latest
     # Run for 24 hours, which is as long as the GH token is valid for.
-    timeout-minutes: 1440
+    timeout-minutes: 120
     continue-on-error: true
     strategy:
       matrix:
