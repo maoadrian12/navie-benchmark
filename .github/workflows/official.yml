@@ -161,6 +161,8 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Solve
+        env: 
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
           pip install virtualenv
           virtualenv venv
